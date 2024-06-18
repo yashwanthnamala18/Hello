@@ -1,6 +1,13 @@
 terraform {
-  backend "consul" {
-    path    = "terraform/state/flex-aws"
-	lock = true
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+      version = "5.54.1"
+    }
   }
+}
+
+provider "aws" {
+  # Configuration options
+region="us-east-1"
 }
