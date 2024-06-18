@@ -1,13 +1,7 @@
 terraform {
-  required_providers {
-    aws = {
-      source = "hashicorp/aws"
-      version = "5.54.1"
-    }
+  backend "s3" {
+      bucket = "my-tf-test-bucket9234"
+      key = "EC2/Demo/terraform.tf"
+      region = "us-east-1"
   }
-}
-
-provider "aws" {
-  # Configuration options
-region="us-east-1"
 }
