@@ -1,13 +1,10 @@
-provider "aws" {
-  region = "us-east-1"
-
-}
-
-resource "aws_s3_bucket" "example" {
-  bucket = "my-tf-test-bucket9234"
+resource "aws_instance" "instance1" {
+  ami           = "ami-08a0d1e16fc3f61ea"
+  instance_type = "t2.micro"
 
   tags = {
-    Name        = "My bucket"
-    Environment = "Dev"
+    name = "My-Demo-Instances-Demo"
   }
 }
+
+
