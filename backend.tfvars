@@ -1,6 +1,5 @@
-
-    key    = "MLMounikaTest3/awsDemo/terraform.tfstate"
-    region = "us-east-1"
+key    = "MLMounikaTest3/awsDemo/terraform.tfstate"
+region = "us-east-1"
   
 
 
