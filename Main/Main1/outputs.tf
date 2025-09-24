@@ -16,3 +16,14 @@ output "simple_message" {
 output "records" {
   value = "action=create-update,name=example.com,type=CNAME,value=www.example.com"
 }
+
+output "records_for_flexdeploy" {
+  value = replace(base64encode(jsonencode([
+    {
+      action = "create-update"
+      name   = "example.com"
+      type   = "CNAME"
+      value  = "www.example.com"
+    }
+  ])), "=", "-")
+}
