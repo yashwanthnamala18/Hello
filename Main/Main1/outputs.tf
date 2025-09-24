@@ -17,7 +17,7 @@ output "records" {
   value = "action=create-update,name=example.com,type=CNAME,value=www.example.com"
 }
 
-output "records_for_flexdeploy" {
+output "new_records" {
   value = replace(base64encode(jsonencode([
     {
       action = "create-update"
