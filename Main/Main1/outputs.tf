@@ -1,4 +1,4 @@
-output "records_for_flexdeplo" {
+output "records_for_flexdeploy" {
   value = jsonencode([
     {
       action = "create-update"
@@ -7,4 +7,8 @@ output "records_for_flexdeplo" {
       value  = "www.example.com"
     }
   ])
+}
+
+output "simple_message" {
+  value = "HelloFlexDeploy"
 }
