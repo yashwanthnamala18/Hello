@@ -27,3 +27,10 @@ output "new_records" {
     }
   ])), "=", "-")
 }
+
+output "dns_records_delimited" {
+  description = "Colon-separated, pipe-delimited DNS records for FlexDeploy"
+  value = join("|", [
+    for record in var.dns_records : "${record.action}:${record.name}:${record.type}:${record.value}"
+  ])
+}
